@@ -121,6 +121,9 @@ prompt = ChatPromptTemplate.from_messages(
     }
 )
 
+# MessagesPlaceholder(variable_name="agent_scratchpad")
+# aget_scratchpad stores previous tool calls and observations. Without it, the agent won't be able to call tools
+# properly.
 tools = [
     get_order_status,
     calculate_refund,
